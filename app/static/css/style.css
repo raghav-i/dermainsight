@@ -253,6 +253,10 @@ header .nav a:hover{
     color:var(--main-color);
 }
 
+section#about.about{
+    background:url(/home/raghav/Documents/dermainsight/app/static/images/rev.png) no-repeat;
+}
+
 
 
 
