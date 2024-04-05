@@ -37,7 +37,8 @@ Pre-requisites:
 
 To run the model locally, run the following in terminal:
 
-```$ git clone https://github.com/raghav-i/dermainsight.git
+```
+$ git clone https://github.com/raghav-i/dermainsight.git
 $ cd derma_insight
 $ python3 -m venv skin-class-env
 $ source skin-class-env/bin/activate
