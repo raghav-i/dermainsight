@@ -158,7 +158,7 @@ header .nav a:hover{
   }
   
   #custom-button:hover {
-    background-color: magenta;
+    background-color: #EE6BC6;
   }
   
   #custom-text {
@@ -186,60 +186,7 @@ header .nav a:hover{
     background-color: EE6BC6;
   }
 
-  .experts .box{
-    width:260px;
-    background:#fff;
-    border-radius: 5px;
-    box-shadow: var(--box-shadow);
-    margin:5px;
-    padding:15px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
 
-.experts .box img{
-    background:#f8f8fe;
-    border-radius: 5px;
-    width: 100%;
-    margin-bottom: 8px;
-}
-
-.experts .box h3{
-    font-size: 22px;
-    margin:2px 0;
-    color:var(--black);
-}
-
-.experts .box span{
-    font-size: 15px;
-    color:var(--main-color);
-}
-
-.experts .box .share{
-    position: absolute;
-    top:5px; right: -50px;
-    transition: .2s;
-}
-
-.experts .box:hover .share{
-    right:15px;
-}
-
-.experts .box .share a{
-    border-radius: 5px;
-    background:var(--main-color);
-    color:#fff;
-    display: block;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    margin-top: 5px;
-}
-
-.experts .box .share a:hover{
-    background:var(--black);
-}
 .contact form{
     padding:15px;
     border-radius: 5px;

@@ -6,7 +6,7 @@ import torchvision.transforms as T
 import os
 
 app = Flask(__name__)
-app.config['UPLOAD_PATH'] = '/path/to/your/upload/folder'
+app.config['UPLOAD_PATH'] = '/home/raghav/Documents/derma_insight/app/static/uploads'
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.jpeg', '.png']
 
 def predict(model, img, tr, classes):
