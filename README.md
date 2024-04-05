@@ -39,7 +39,7 @@ To run the model locally, run the following in terminal:
 
 ```
 $ git clone https://github.com/raghav-i/dermainsight.git
-$ cd derma_insight
+$ cd dermainsight
 $ python3 -m venv skin-class-env
 $ source skin-class-env/bin/activate
 $ python3 predict.py -m "Path to torch model" -i "Path to image"

@@ -6,7 +6,7 @@ import torchvision.transforms as T
 import os
 
 app = Flask(__name__)
-app.config['UPLOAD_PATH'] = '/home/raghav/Documents/derma_insight/app/static/uploads'
+app.config['UPLOAD_PATH'] = '/home/raghav/Documents/dermainsight/app/static/uploads'
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.jpeg', '.png']
 
 def predict(model, img, tr, classes):
@@ -32,7 +32,7 @@ def home_page():
             if any(filename.endswith(ext) for ext in app.config['UPLOAD_EXTENSIONS']):
                 path = os.path.join(app.config['UPLOAD_PATH'], filename)
                 f.save(path)
-                model = torch.load('/path/to/your/model/skin-model-pokemon.pt', map_location=torch.device('cpu'))
+                model = torch.load('/home/raghav/Documents/dermainsight/skin-model.pt', map_location=torch.device('cpu'))
                 device = torch.device('cpu')
                 model.to(device)
                 img = Image.open(path).convert("RGB")
