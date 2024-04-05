@@ -140,7 +140,7 @@ header .nav a:hover{
 }
 
 
-  #custom-button {
+#custom-button {
     padding: 10px;
     color: white;
     background-color: var(--main-color);
@@ -155,18 +155,19 @@ header .nav a:hover{
    margin-top:35px;
    cursor: pointer;
    
-  }
+}
   
-  #custom-button:hover {
+#custom-button:hover {
     background-color: #EE6BC6;
-  }
+}
   
-  #custom-text {
+#custom-text {
     margin-left: 10px;
     font-family: sans-serif;
     color: black;
-  }
-  #submit-button {
+}
+  
+#submit-button {
     padding: 10px;
     color: white;
     background-color: var(--main-color);
@@ -181,18 +182,20 @@ header .nav a:hover{
    margin-top:35px;
    cursor: pointer;
    
-  }
-  #submit-button:hover {
+}
+  
+#submit-button:hover {
     background-color: #EE6BC6;
-  }
+}
 
 
 .contact form{
     padding:15px;
     border-radius: 5px;
+    margin-left:280px;
+    margin-right: -290px;
     box-shadow: var(--box-shadow);
 }
-
 .contact form .box,
 .contact form textarea{
     background:#f8f8fe;

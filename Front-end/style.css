@@ -189,6 +189,8 @@ header .nav a:hover{
 .contact form{
     padding:15px;
     border-radius: 5px;
+    margin-left:280px;
+    margin-right: -290px;
     box-shadow: var(--box-shadow);
 }
 
