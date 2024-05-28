@@ -101,38 +101,38 @@
 
             <div class="box p-4 m-2">
                 <img src="{{ url_for('static', filename='images/dry.png') }}" alt="">
-                <h3>Acne</h3>
+                <h3><a href = "https://www.niams.nih.gov/health-topics/acne" class = "h-btn">Acne</a></h3>
                 <p>A common skin condition characterized by the presence of pimples, blackheads, and whiteheads typically occurring on the face, chest, and back due to clogged pores and inflammation.</p>
             </div>
 
             <div class="box p-4 m-2">
                 <img src="{{ url_for('static', filename='images/acne.png') }}" alt="">
-                <h3>Acne Scars</h3>
+                <h3><a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2958495/" class = "h-btn">Acne Scars</a></h3>
                 <p>Marks or depressions left on the skin after severe acne breakouts heal, resulting from damage to the skin's collagen fibers. They can vary in appearance and may fade over time but often require medical intervention for significant improvement.</p>
             </div>
             <div class="box p-4 m-2">
                 <img src="{{ url_for('static', filename='images/Normal.png') }}" alt="">
-                <h3>Acanthosis Nigricans</h3>
+                <h3><a href = "https://www.ncbi.nlm.nih.gov/books/NBK431057/" class = "h-btn">Acanthosis Nigricans</a></h3>
                 <p>A skin condition characterized by thickened, dark, velvety patches of skin typically occurring in the folds and creases of the body, often associated with insulin resistance, obesity, hormonal disorders, or certain medications.</p>
             </div>
             <div class="box p-4 m-2">
                 <img src="{{ url_for('static', filename='images/oily.png') }}" alt="">
-                <h3>Alopecia Areata</h3>
+                <h3><a href = "https://www.aad.org/public/diseases/hair-loss/types/alopecia" class = "h-btn">Alopecia Areata</a></h3>
                 <p>An autoimmune condition causing sudden hair loss in round patches on the scalp or other parts of the body, thought to be triggered by the immune system attacking hair follicles.</p>
             </div>
             <div class="box p-4 m-2">
                 <img src="{{ url_for('static', filename='images/Normal.png') }}" alt="">
-                <h3>Melasma</h3>
+                <h3><a href = "https://www.aad.org/public/diseases/a-z/melasma-overview" class = "h-btn">Melasma</a></h3>
                 <p>A common skin condition causing brown or gray patches, typically on the face, triggered by hormonal changes, sun exposure, or genetics.</p>
             </div>
             <div class="box p-4 m-2">
                 <img src="{{ url_for('static', filename='images/Sensitive.png') }}" alt="">
-                <h3>Vitiligo</h3>
+                <h3><a href = "https://www.niams.nih.gov/health-topics/vitiligo" class = "h-btn">Vitiligo</a></h3>
                 <p>A skin disorder characterized by patches of depigmented skin due to the loss of melanin-producing cells, resulting in irregular white patches on the skin's surface.</p>
             </div>
             <div class="box p-4 m-2">
                 <img src="{{ url_for('static', filename='images/acne.png') }}" alt="">
-                <h3>Warts</h3>
+                <h3><a href = "https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/warts" class = "h-btn">Warts</a></h3>
                 <p>Small, benign growths caused by the human papillomavirus (HPV), appearing on the skin's surface, commonly on the hands and feet, and may vary in appearance depending on the type of HPV involved.</p>
             </div>
 
@@ -147,15 +147,29 @@
 <!-- check -->
 
 <section class="check" id="check">
+
     <h1 class="heading"> <span>Check Your Skin Type</span> </h1>
-    <form id="upload-form" method="POST" enctype="multipart/form-data">
-        <input type="file" id="real-file" name="file" hidden="hidden" />
-        <center><button type="button" id="custom-button">Choose A File</button></center>
-        <br><br>
-        <center><button type="submit" id="submit-button">Submit</button></center>
-        <!-- Add the specific message here -->
-        <div>Your Result is: <span id="result-message">{{ res }}</span></div>
-    </form>
+
+    <form method="POST", enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+        <div class="custom-file-input">
+            <center>{{ form.file(class="custom-file-input", id="submit-button") }}</center>
+        </div>
+        <div class="custom-submit-button">
+           <center>{{ form.submit(type="submit", class ="custom-submit-button", id="submit-button") }}</center> 
+        </div>
+
+    </form> 
+    <br>
+    <br>
+    {% if res %}
+        <div>
+        <center><h4 style="color: #a0527c; font-size: 2vw;">Your Result is here: </h4></center>
+        <center><h4 style="color: #a0527c; font-size: 2vw;">{{res}}</h4></center>
+        </div>
+    {% endif %}
+
+
 </section>
 
 <!-- check ends -->
@@ -164,7 +178,7 @@
 
 <section class="contact" id="contact">
 
-    <h1 class="heading"> <span>Contact</span> Us </h1>
+    <h1 class="heading"> <span>Contact</span> </h1>
     
         <div class="container">
     

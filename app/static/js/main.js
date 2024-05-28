@@ -34,17 +34,30 @@ window.onscroll = () =>{
 const realFileBtn = document.getElementById("real-file");
 const customBtn = document.getElementById("custom-button");
 const customTxt = document.getElementById("custom-text");
+const imagePreview = document.getElementById("image-preview");
 
 customBtn.addEventListener("click", function() {
   realFileBtn.click();
 });
 
 realFileBtn.addEventListener("change", function() {
-  if (realFileBtn.value) {
-    customTxt.innerHTML = realFileBtn.value.match(
-      /[\/\\]([\w\d\s\.\-\(\)]+)$/
-    )[1];
+  const file = this.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function() {
+      const image = new Image();
+      image.src = this.result;
+      image.classList.add("w-100"); // Adjust image width as needed
+      imagePreview.innerHTML = ""; // Clear previous image if any
+      imagePreview.appendChild(image);
+    });
+
+    reader.readAsDataURL(file);
+    customTxt.innerHTML = file.name; // Display file name
   } else {
     customTxt.innerHTML = "No file chosen, yet.";
+    imagePreview.innerHTML = ""; // Clear image preview
   }
 });
