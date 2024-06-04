@@ -43,7 +43,7 @@ def home():
         # filename = secure_filename(f.filename)
         path = os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_PATH'],secure_filename(file.filename))
         model = torch.load('./skin-model.pt', map_location=torch.device('cpu'))
-        device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+        device = torch.device('cpu')
         model.to(device)
         img = Image.open(path).convert("RGB")
         tr = get_transforms()
