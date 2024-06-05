@@ -1,9 +1,0 @@
-__pycache__/
-*.md
-*.ipynb
-*.log
-*.csv
-*.json
-*.config
-*.env
-LICENSE
