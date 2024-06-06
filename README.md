@@ -31,9 +31,10 @@ The project utilizes the **EfficientNet-B0** architecture, renowned for its effi
 # Getting Started
 
 Pre-requisites: 
-- torch 1.10.0
-- torchvision 0.11.1
-- Pillow 9.0.0
+- Pillow 9.0.1
+- torch 2.2.1
+- torchvision 0.17.1
+
 
 To run the model locally, run the following in terminal:
 
