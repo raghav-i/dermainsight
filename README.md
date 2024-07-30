@@ -28,6 +28,10 @@ The project utilizes the **EfficientNet-B0** architecture, renowned for its effi
 - Regularization techniques, including dropout and batch normalization, enhance model generalization by preventing overfitting. 
 - Data augmentation, such as random flips and rotations, increases dataset variability, improving model robustness. These techniques collectively optimize model performance and enable accurate skin condition classification.
 
+# Screenshot
+
+![website](http://dermainsight.jpeg)
+
 # Getting Started
 
 Pre-requisites: 
