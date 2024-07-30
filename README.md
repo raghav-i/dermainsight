@@ -30,7 +30,7 @@ The project utilizes the **EfficientNet-B0** architecture, renowned for its effi
 
 # Screenshot
 
-![website](/home/raghav/Documents/dermainsight/dermainsight.jpeg)
+![website](https://github.com/raghav-i/dermainsight/blob/main/dermainsight.jpeg)
 
 # Getting Started
 
